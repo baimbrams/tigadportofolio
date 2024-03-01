@@ -33,26 +33,26 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
-
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        Saya seorang Software Developer Design dengan pengalaman dalam
-        JavaScript, dan keahlian dalam framework seperti React, dan three.js.
-        Saya berkolaborasi erat dengan klien membuat solusi yang efisien,
-        scalable, and user-friendly. Mari bekerja sama untuk mewujudkan ide-ide
-        Anda!
-      </motion.p>
-
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className="mt-24">
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </motion.div>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
+          Saya seorang Software Developer Design dengan pengalaman dalam
+          JavaScript, dan keahlian dalam framework seperti React, dan three.js.
+          Saya berkolaborasi erat dengan klien membuat solusi yang efisien,
+          scalable, and user-friendly. Mari bekerja sama untuk mewujudkan
+          ide-ide Anda!
+        </motion.p>
+        <div className="mt-20 flex flex-wrap gap-10">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
       </div>
     </>
   );
